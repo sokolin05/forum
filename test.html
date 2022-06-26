@@ -1,18 +1,27 @@
 <script src="https://log.province5s.ru/src/js/jquery-3.4.1.min.js"></script><script>
     $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@server@')
-        $('#server0').html(arr[0]);
-        $('#server1').html(arr[1]);
-        $('#server2').html(arr[2]);
-        $('#server3').html(arr[3]);
-        $('#server4').html(arr[4]);
-        $('#server5').html(arr[5]);
-        $('#server6').html(arr[6]);
+    var arr = arr.split('@server1@')
+        $('#server1').html(arr[0]);
+    var arr = arr.split('@server2@')
+        $('#server2').html(arr[0]);
+    var arr = arr.split('@server3@')
+        $('#server3').html(arr[0]);
+    var arr = arr.split('@server4@')
+        $('#server4').html(arr[0]);
+    var arr = arr.split('@server5@')
+        $('#server5').html(arr[0]);
+    var arr = arr.split('@server6@')
+        $('#server6').html(arr[0]);
+    var arr = arr.split('@server7@')
+        $('#server7').html(arr[0]);
     });
     </script>
     <div>
-        <span id="server0">&nbsp;</span>
-    </div>
-    <div>
-        <span id="server2">&nbsp;</span>
+        <span id="server1">&nbsp;</span><br>
+        <span id="server2">&nbsp;</span><br>
+        <span id="server3">&nbsp;</span><br>
+        <span id="server4">&nbsp;</span><br>
+        <span id="server5">&nbsp;</span><br>
+        <span id="server6">&nbsp;</span><br>
+        <span id="server7">&nbsp;</span><br>
     </div>
