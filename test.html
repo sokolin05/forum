@@ -1,39 +1,516 @@
-<script src="https://log.province5s.ru/src/js/jquery-3.4.1.min.js"></script><script>
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serverone@')
-        $('#server1').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@servertwo@')
-        $('#server2').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serverthee@')
-        $('#server3').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serverfour@')
-        $('#server4').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serverfive@')
-        $('#server5').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serversix@')
-        $('#server6').html(arr[0]);
-    });
-    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@serverseven@')
-        $('#server7').html(arr[0]);
-    });
-    </script>
-    <div>
-        <span id="server1">&nbsp;</span><br>
-        <span id="server2">&nbsp;</span><br>
-        <span id="server3">&nbsp;</span><br>
-        <span id="server4">&nbsp;</span><br>
-        <span id="server5">&nbsp;</span><br>
-        <span id="server6">&nbsp;</span><br>
-        <span id="server7">&nbsp;</span><br>
-    </div>
+
+<html>
+    <body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>
+        $(function() {
+            $(".wandererSpoilerHead").click(function() {
+                $(this).toggleClass("wandererSpoiler");
+                let a = $(this).next(".wandererSpoilerBody");
+                a.toggleClass("active");
+            });
+        });
+        let menu_hide = 0;
+        function transition(name) {
+          $('body,html').animate({scrollTop:$("#"+name).offset().top - $('nav').innerHeight() - 10}, 200);
+        }
+      </script>
+      <style type="text/css">
+          .button-sokolin {
+              text-decoration: none;
+              display: inline-block;
+              padding: 5px 10px;
+              margin: auto 2px;
+              position: relative;
+              overflow: hidden;
+              border: 2px solid #fe4b37;
+              border-radius: 8px;
+              font-family: 'Montserrat', sans-serif;
+              color: #fe4b37;
+              transition: .2s ease-in-out;
+              }
+          .button-sokolin:before {
+              content: "";
+              background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+              height: 50px;
+              width: 50px;
+              position: absolute;
+              top: -8px;
+              left: -75px;
+              transform: skewX(-45deg);
+              }
+          .button-sokolin:hover {
+              background: #fe4b37;
+              color: #fff;
+              }
+          .button-sokolin:hover:before {
+              left: 350px;
+              transition: .5s ease-in-out;
+              }
+      </style>
+      <style type="text/css">
+          .wandererSpoilerHead {
+              cursor: pointer;
+              background: #17191f;
+              color: #ffffff;
+              padding: 5px 15px;
+              font-weight: bold;
+              font-size: 16px;
+              display: block;
+              border-radius: 8px 8px 8px 8px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+          }
+          .wandererSpoilerBody {
+              display: none;
+              padding: 0px 15px;
+              background: #17191f;
+              position: relative;
+              clear: both;
+              border-radius: 0px 0px 8px 8px;
+              margin-bottom: 10px;
+              margin-top: -22px;
+          }
+          .active {
+              display: block;
+          }
+          .wandererSpoilerHead a {
+              text-decoration: none;
+          }
+          .wandererSpoilerHead a:before {
+              vertical-align: middle;
+              font-family: 'FontAwesome';
+              font-size: 16px;
+              margin-top: -4px;
+              content: "\f138";
+          }
+          .wandererSpoiler a:before {
+              vertical-align: middle;
+              font-family: 'FontAwesome';
+              font-size: 16px;
+              margin-top: -4px;
+              content: "\f13a";
+          }
+          .wandererSpoiler {
+              border-radius: 8px 8px 0px 0px;
+              margin-bottom: 0px;
+          }
+          .wandererSpoilerBody ul {
+              margin: 0px;
+          }
+          .wandererSpoilerBody ol {
+              margin: 0px;
+          }
+      </style>
+      <div class="wandererSpoilerHead">
+          <a rel="">&nbsp;</a> <span style="color:#ffc000; text-align:center">ТРУДОВАЯ КНИГА</span>
+      </div>
+    
+      <div class="wandererSpoilerBody">
+          <h4 style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:12px;">
+                      <span style="color:#7f8c8d; display: inline-block; background-color: #293133; padding: 5px 15px; border-radius: 13px; margin-top: 10px;">5 сервер</span>
+                  </span>
+              </span>
+          </h4>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEXANDER WESKER</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[526 дней]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Приволжск</strong> | 29.09.2019 – ??.??.2019 | <strong>?? дней</strong> | интерн[1] – старший специалист[7] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#27ae60;"><strong> &bull; Армия</strong> | ??.??.2019 – ??.??.2019 | <strong>?? дней</strong> | рядовой[1] — старшина[3] | <strong>ВБ получен</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#3498db;"><strong> &bull; УГИБДД г. Мирный</strong> | ??.??.2019 – ??.??.2019 | <strong>?? дней</strong> | рядовой[1] — старшина[3] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Приволжск</strong> | ??.??.2019 – ??.12.2019 | <strong>?? дней</strong> | старший специалист[7] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#ff9966;"><strong> &bull; ОАО «РЖД»</strong> | ??.12.2019 – 29.12.2019 | <strong>?? дней</strong> | слесарь-электрик[1] — машинист[3] | <strong>увольнение по 1.12 ПдСФ [3/3] [7/6]</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ОКБ г. Мирный</strong> | 09.03.2020 - 12.04.2020 | <strong>33 дня</strong> | парамедик[6] — заведующий ОСП[8] | <strong>перевод в ЦГБ-П</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Приволжск</strong> | 12.04.2020 - 27.04.2020 | <strong>15 дней</strong> | старший специалист[7] — заведующий МА[8] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX SOKOLIN</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[61 день]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#2980b9;"><strong> &bull; ГУ МВД г. Невский</strong> | 27.04.2020 - 12.05.2020 | <strong>16 дней</strong> | лейтенант[5] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#ff9966;"><strong> &bull; ОАО «РЖД»</strong> | 12.05.2020 – 27.05.2020 | <strong>15 дней</strong> | слесарь-электрик[1] — поездной диспетчер[4] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX SANCHES</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[51 день]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#666666;"><strong> &bull; Семья «Sanches»</strong> | 27.06.2020 – 17.08.2020 | <strong>51 день</strong> | участник семьи[1] | <strong>уход по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ОКБ г. Мирный</strong> | 28.06.2020 – 23.08.2020 | <strong>57 дней</strong> | старший специалист[7] - заместитель главного врача[9] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX MESTNIY</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[276 дней]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#cc3366;"><strong> &bull; Семья «Mestniy» [н/о] </strong> | 18.08.2020 – 21.05.2021 | <strong>276 дней</strong> | участник семьи[1] | <strong>уход по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Приволжск</strong> | 18.11.2020 – 25.12.2020 | <strong>38 дней</strong> | парамедик[6] — заведующий ТО[8] | <strong>перевод в ЦГБ-Н</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; РГБУЗ "Невская ЦГБ"</strong> | 25.12.2020 – 20.01.2021 | <strong>26 дней</strong> | парамедик[6] — заведующий ОСиНП[8] | <strong>перевод в ЦГБ-П</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Приволжск</strong> | 20.01.2021 – 08.02.2021 | <strong>20 дней</strong> | парамедик[6] — заместитель главного врача[9] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ОКБ г. Мирный</strong> | 07.05.2021 – 09.06.2021 | <strong>33 дня</strong> | интерн[1] — заместитель заведующего МА[7] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#b5bbbb;"><strong> &bull; ЧАП «ИнтерТранс» [н/о]</strong> | 10.05.2021 – 22.06.2021 | <strong>43 дня</strong> | стажер[1] — начальник отделения АО[5] | <strong>стал администратором</strong></span>
+                  </span>
+              </span>
+          </p>
+          
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX SOKOLIN</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[BY SOKOL]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="color:#f1c40f;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:medium;"><strong> &bull; ADMINS TEAM</strong></span>
+          </p>
+    
+          <p style="margin-left:40px;">
+              <span style="font-size:14px;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="color:#f39c12;">22.06.2021 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#f39c12;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">22.06.2021 - 10.07.2021 | <strong>18 дней</strong> | помощник администратора[1]</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#f39c12;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">10.07.2021 - 29.07.2021 | <strong>19 дней</strong> | младший администратор[2]</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#f39c12;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">29.07.2021 - 14.08.2021 | <strong>16 дней</strong> | администратор[3]</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#f39c12;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">14.08.2021 - 24.06.2022 | <strong>314 дней</strong> | старший администратор[4]</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#f39c12;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">24.06.2022 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong> | руководитель[5]</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:40px;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;">18.09.2021 - 19.06.2022 | <strong>274 дня</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="color:#e74c3c;">
+                      <span style="font-size:14px;">18.09.2021 - 06.02.2022 | <strong>141 день</strong> | ПГС за МЗ</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="color:#e74c3c;"><
+                      span style="font-size:14px;">06.02.2022 - 19.06.2022 | <strong>133 дня</strong> | ГС за МЗ</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:40px;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#9b59b6;">23.11.2021 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong> | управляющий в </span>
+                      <a href="https://discord.gg/JeJSCYcHp2" rel="external nofollow">дискорде</a>
+                      <span style="color:#9b59b6;"> 5-го сервера</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#9b59b6;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">23.11.2021 - 24.02.2022 | <strong>94 дня</strong> | модератор</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:80px;">
+              <span style="color:#9b59b6;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">24.02.2022 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong> | управляющий</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:40px;">
+              <span style="color:#16a085;">
+                  <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                      <span style="font-size:14px;">15.04.2022 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong> | проверяющий камеры</span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="margin-left:40px;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="color:#27ae60;">
+                      <span style="font-size:14px;">28.05.2022 - ХХ.ХХ.ХХХХ | <strong>ХХ дней</strong> | модератор/администратор платформы </span>
+                      <a href="https://vk.com/info_pay" rel="external nofollow">infopay</a>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <br>
+              &nbsp;
+          </p>
+    
+          <h4 style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:12px;">
+                      <span style="color:#7f8c8d; display: inline-block; background-color: #293133; padding: 5px 15px; border-radius: 13px;">6 сервер</span>
+                  </span>
+              </span>
+          </h4>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEXANDER WECKER</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[?? дней]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX SOKOLIN</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b> </b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#e74c3c;"><strong> &bull; ЦГБ г. Невский</strong> | 18.03.2022 – 25.03.2022 | <strong>8 дней</strong> | интерн[1] — фельдшер[2] | <strong>увольнение по СЖ</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <br>
+              &nbsp;
+          </p>
+    
+          <h4 style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:12px;">
+                      <span style="color:#7f8c8d; display: inline-block; background-color: #293133; padding: 5px 15px; border-radius: 13px;">7 сервер</span>
+                  </span>
+              </span>
+          </h4>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEXANDER WESKER</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b>[?? дней]</b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p style="text-align:center;">
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:18px;">
+                      <span style="color:#e67e22;"><b>ALEX SOKOLIN</b></span><font color="#e67e22"><b>&nbsp;</b></font>
+                      <span style="color:#d35400;"><b> </b></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+                  <span style="font-size:14px;">
+                      <span style="color:#27ae60;"><strong> &bull; Армия</strong> | 16.04.2021 - ??.05.2021 | <strong>?? дней</strong> | рядовой[1] | <strong>ВБ не получен</strong></span>
+                  </span>
+              </span>
+          </p>
+    
+          <p>
+              &nbsp;
+          </p>
+      </div>
+      <p>
+        <img alt="" class="ipsImage" data-loaded="true" data-ratio="29.41" data-src="https://i.imgur.com/LyoyfPt.jpg" height="294" src="https://i.imgur.com/LyoyfPt.jpg" style="height: auto;" width="1000">
+      </p>
+      <marquee onmouseout="if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; this.start()" onmouseover="if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; this.stop()" scrollamount="10">
+          <span style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/topic/128823-server-5-vnutrennie-pravila-servera/" rel="" style="text-decoration: none;" target="_blank"><b>Внутренние правила сервера</b></a>
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/topic/463807-province-5-pravila-zelenyh-zon/" rel="" style="text-decoration: none;" target="_blank"><b>Правила зеленых зон</b></a>
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/topic/402858-server-5-polozhenie-ob-administracii/" rel="" style="text-decoration: none;" target="_blank"><b>Положение об администрации</b></a>
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/topic/357498-server-5-pravila-ispolzovaniya-kamhaka/" rel="" style="text-decoration: none;" target="_blank"><b>Правила использования камхака</b></a>
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/forum/382-kniga-zhalob/" rel="" style="text-decoration: none;" target="_blank"><b>Раздел жалоб</b></a>
+              <a class="button-sokolin" href="https://forum.gtaprovince.ru/forum/384-informacionnyy-razdel/" rel="" style="text-decoration: none;" target="_blank"><b>Информационный раздел</b></a>
+          </span>
+      </marquee>
+    </body>
+    </html>
+    
