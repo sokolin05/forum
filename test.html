@@ -1,18 +1,30 @@
 <script src="https://log.province5s.ru/src/js/jquery-3.4.1.min.js"></script><script>
     $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
-    var arr = arr.split('@server1@')
+    var arr = arr.split('@serverone@')
         $('#server1').html(arr[0]);
-    var arr = arr.split('@server2@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@servertwo@')
         $('#server2').html(arr[0]);
-    var arr = arr.split('@server3@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@serverthee@')
         $('#server3').html(arr[0]);
-    var arr = arr.split('@server4@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@serverfour@')
         $('#server4').html(arr[0]);
-    var arr = arr.split('@server5@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@serverfive@')
         $('#server5').html(arr[0]);
-    var arr = arr.split('@server6@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@serversix@')
         $('#server6').html(arr[0]);
-    var arr = arr.split('@server7@')
+    });
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@serverseven@')
         $('#server7').html(arr[0]);
     });
     </script>
