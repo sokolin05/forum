@@ -1,0 +1,15 @@
+<script src="https://log.province5s.ru/src/js/jquery-3.4.1.min.js"></script><script>
+    $.get('https://raw.githubusercontent.com/sokolin05/forum/main/test.php', function(arr) {
+    var arr = arr.split('@server@')
+        $('#server0').html(arr[0]);
+        $('#server1').html(arr[1]);
+        $('#server2').html(arr[2]);
+        $('#server3').html(arr[3]);
+        $('#server4').html(arr[4]);
+        $('#server5').html(arr[5]);
+        $('#server6').html(arr[6]);
+    });
+    </script>
+    <div>
+        <span id="server0">&nbsp;</span>
+    </div>
