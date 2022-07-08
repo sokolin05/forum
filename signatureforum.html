@@ -1,16 +1,4 @@
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>
-$(function() {
-    $(".wandererSpoilerHead").click(function() {
-        $(this).toggleClass("wandererSpoiler");
-        let a = $(this).next(".wandererSpoilerBody");
-        a.toggleClass("active");
-    });
-});
-let menu_hide = 0;
-function transition(name) {
-    $('body,html').animate({scrollTop:$("#"+name).offset().top - $('nav').innerHeight() - 10}, 200);
-}
 </script>
 <style type="text/css">
     .button-sokolin {
@@ -45,65 +33,13 @@ function transition(name) {
         transition: .5s ease-in-out;
         }
 </style>
-<style type="text/css">
-    .wandererSpoilerHead {
-        cursor: pointer;
-        background: #17191f;
-        color: #ffffff;
-        padding: 5px 15px;
-        font-weight: bold;
-        font-size: 16px;
-        display: block;
-        border-radius: 8px 8px 8px 8px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .wandererSpoilerBody {
-        display: none;
-        padding: 0px 15px;
-        background: #17191f;
-        position: relative;
-        clear: both;
-        border-radius: 0px 0px 8px 8px;
-        margin-bottom: 10px;
-        margin-top: -22px;
-    }
-    .active {
-        display: block;
-    }
-    .wandererSpoilerHead a {
-        text-decoration: none;
-    }
-    .wandererSpoilerHead a:before {
-        vertical-align: middle;
-        font-family: 'FontAwesome';
-        font-size: 16px;
-        margin-top: -4px;
-        content: "\f138";
-    }
-    .wandererSpoiler a:before {
-        vertical-align: middle;
-        font-family: 'FontAwesome';
-        font-size: 16px;
-        margin-top: -4px;
-        content: "\f13a";
-    }
-    .wandererSpoiler {
-        border-radius: 8px 8px 0px 0px;
-        margin-bottom: 0px;
-    }
-    .wandererSpoilerBody ul {
-        margin: 0px;
-    }
-    .wandererSpoilerBody ol {
-        margin: 0px;
-    }
-</style>
-<div class="wandererSpoilerHead">
-    <a rel="">&nbsp;</a> <span style="color:#ffc000; text-align:center">ТРУДОВАЯ КНИГА</span>
-</div>
 
-<div class="wandererSpoilerBody">
+<div class="ipsSpoiler" data-ipsspoiler="">
+	<div class="ipsSpoiler_header">
+		<span>Спойлер</span>
+	</div>
+
+	<div class="ipsSpoiler_contents ipsClearfix" data-gramm="false">
     <h4 style="text-align:center;">
         <span style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
             <span style="font-size:12px;">
@@ -495,6 +431,7 @@ function transition(name) {
     <p>
         &nbsp;
     </p>
+	</div>
 </div>
 <marquee onmouseout="if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; this.start()" onmouseover="if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; if (!window.__cfRLUnblockHandlers) return false; this.stop()" scrollamount="10">
     <span style="text-align: center; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;">
