@@ -6,6 +6,28 @@
 	font-style: normal;
 }
 
+.ipsPageHeader { display: none; }
+#elComment_1 .ipsResponsive_hidePhone { display: none; }
+#elComment_1 .ipsComment_author { display: none; }
+#elComment_1 .ipsComment_meta { display: none; }
+#elComment_1 .ipsType_reset  { display: none; }
+#elComment_1 { border-radius: 8px 8px 8px 8px; margin-top: -15px; }
+.md-toast-warning { font-size: 19px; line-height: 1.1;}
+.ipsPager { display: none; }
+#elComment_1 .ipsType_normal.ipsType_richText.ipsContained { background-color: #22242b; font-family: "Uni Neue"; font-size: 16px; }
+
+.card-2-sokolin {
+    height: 100%!important;
+    color: #ececec;
+    background-color: #262837;
+	border-radius: 15px;
+}
+
+.card-3-sokolin {
+padding: 15px!important;
+position: relative!important;
+}
+
 html {
     scroll-behavior: smooth;
 }
