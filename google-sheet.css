@@ -110,4 +110,8 @@
   .docs-gm .modal-dialog .goog-flat-button.goog-flat-button-disabled,.docs-gm .modal-dialog button[disabled],.docs-gm .modal-dialog .goog-buttonset-action[disabled],.docs-gm .modal-dialog .jfk-button-standard.jfk-button-disabled,.docs-gm .modal-dialog .jfk-button-action.jfk-button-disabled,.docs-gm .docs-material-bubble .jfk-button-standard.jfk-button-disabled,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-disabled{
       cursor:default
   }
-  
+  .modal-dialog-buttons{
+    float:right;
+    margin-bottom:14px;
+    margin-top:8px
+}
