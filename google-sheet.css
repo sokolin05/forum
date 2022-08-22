@@ -1,117 +1,63 @@
-.goog-buttonset-action,.docs-gm .modal-dialog .jfk-button-action,.docs-gm .docs-material-bubble .jfk-button-action{
-    background-image:none;
-    border:1px solid transparent!important;
-    border-radius:4px;
-    box-shadow:none;
-    box-sizing:border-box;
-    font-family: 'Roboto', sans-serif;
-    font-weight:500;
-    font-size:14px;
-    height:36px;
-    letter-spacing:0.25px;
-    line-height:16px;
-    padding:9px 24px 11px 24px;
-    background:#188038;
-    color:#fff
-  }
-  .docs-gm .modal-dialog .goog-buttonset-action:hover,.docs-gm .modal-dialog .jfk-button-action.jfk-button-hover,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-hover{
-    background-image:none;
-    border:1px solid transparent!important;
-    border-radius:4px;box-shadow:none;
-    box-sizing:border-box;
-    font-family:'Roboto', sans-serif;
-    font-weight:500;
-    font-size:14px;
-    height:36px;
-    letter-spacing:0.25px;
-    line-height:16px;
-    padding:9px 24px 11px 24px;
-    background:#188038;
-    color:#fff;
-    background:#2a8947;
-    box-shadow:0 1px 3px 1px rgba(52,168,83,0.15)
-  }
-  .docs-gm .modal-dialog .goog-buttonset-action:focus,.docs-gm .modal-dialog .jfk-button-action.jfk-button-focused,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-focused{
-      background-image:none;
-      border:1px solid transparent!important;
-      border-radius:4px;
-      box-shadow:none;
-      box-sizing:border-box;
-      font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      font-size:14px;
-      height:36px;
-      letter-spacing:0.25px;
-      line-height:16px;
-      padding:9px 24px 11px 24px;
-      background:#188038;
-      color:#fff;
-      background:#4f9e67;
-      box-shadow:0 1px 3px 1px rgba(52,168,83,0.15)
-  }
-  .docs-gm .modal-dialog .goog-buttonset-action:hover:focus,.docs-gm .modal-dialog .jfk-button-action.jfk-button-hover.jfk-button-focused,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-hover.jfk-button-focused{
-      background-image:none;
-      border:1px solid transparent!important;
-      border-radius:4px;
-      box-shadow:none;
-      box-sizing:border-box;
-      font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      font-size:14px;
-      height:36px;
-      letter-spacing:0.25px;
-      line-height:16px;
-      padding:9px 24px 11px 24px;
-      background:#188038;
-      color:#fff;
-      background:#62a877;
-      box-shadow:0 1px 3px 1px rgba(52,168,83,0.15)
-  }
-  .docs-gm .modal-dialog .goog-buttonset-action:active,.docs-gm .modal-dialog .goog-buttonset-action:focus:active,.docs-gm .modal-dialog .jfk-button-action.jfk-button-active,.docs-gm .modal-dialog .jfk-button-action.jfk-button-focus.jfk-button-active,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-active,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-focus.jfk-button-active{
-      background-image:none;
-      border:1px solid transparent!important;
-      border-radius:4px;
-      box-shadow:none;
-      box-sizing:border-box;
-      font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      font-size:14px;
-      height:36px;
-      letter-spacing:0.25px;
-      line-height:16px;
-      padding:9px 24px 11px 24px;
-      background:#188038;
-      color:#fff;
-      background:#62a877;
-      box-shadow:0 2px 6px 2px rgba(52,168,83,0.15)
-  }
-  .docs-gm .modal-dialog .goog-buttonset-action[disabled],.docs-gm .modal-dialog .jfk-button-action.jfk-button-disabled,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-disabled{
-      background-image:none;
-      border:1px solid transparent!important;
-      border-radius:4px;
-      box-shadow:none;
-      box-sizing:border-box;
-      font-family: 'Roboto', sans-serif;
-      font-weight:500;
-      font-size:14px;
-      height:36px;
-      letter-spacing:0.25px;
-      line-height:16px;
-      padding:9px 24px 11px 24px;
-      background:#188038;
-      color:#fff;
-      background:#f1f3f4;
-      color:#3c4043;
-      opacity:0.38
-  }
-  .docs-gm .modal-dialog .goog-flat-button,.docs-gm .modal-dialog button,.docs-gm .modal-dialog .goog-buttonset-action,.docs-gm .modal-dialog .jfk-button-standard,.docs-gm .modal-dialog .jfk-button-action,.docs-gm .docs-material-bubble .jfk-button-standard,.docs-gm .docs-material-bubble .jfk-button-action{
-      cursor:pointer
-  }
-  .docs-gm .modal-dialog .goog-flat-button.goog-flat-button-disabled,.docs-gm .modal-dialog button[disabled],.docs-gm .modal-dialog .goog-buttonset-action[disabled],.docs-gm .modal-dialog .jfk-button-standard.jfk-button-disabled,.docs-gm .modal-dialog .jfk-button-action.jfk-button-disabled,.docs-gm .docs-material-bubble .jfk-button-standard.jfk-button-disabled,.docs-gm .docs-material-bubble .jfk-button-action.jfk-button-disabled{
-      cursor:default
-  }
-  .modal-dialog-buttons{
-    float:right;
-    margin-bottom:14px;
-    margin-top:8px
-}
+body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .buttons-sokolin-google {
+        cursor: pointer;
+        float: right;
+      }
+      .button-sokolin-google-green {
+        background-image: none;
+        border: 1px solid transparent!important;
+        border-radius: 4px;
+        box-shadow: none;
+        box-sizing: border-box;
+        font-size: 14px;
+        height: 36px;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        padding: 9px 24px 11px 24px;
+        background: #188038;
+        color: #fff;
+        margin: 0px 12px 0px 0px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+      }
+      .button-sokolin-google-green:hover {
+        background: #2a8947;
+        box-shadow: 0 1px 3px 1px rgb(52 168 83 / 15%);
+      }
+      .button-sokolin-google-green:active {
+        background: #62a877;
+        box-shadow: 0 2px 6px 2px rgb(52 168 83 / 15%);
+      }
+      .button-sokolin-google-white {
+        background-image: none;
+        border: 1px solid transparent!important;
+        border-radius: 4px;
+        box-shadow: none;
+        box-sizing: border-box;
+        font-size: 14px;
+        height: 36px;
+        letter-spacing: 0.25px;
+        line-height: 16px;
+        padding: 9px 24px 11px 24px;
+        background: white;
+        border: 1px solid #dadce0!important;
+        color: #137333;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+      }
+      .button-sokolin-google-white:hover {
+        background: #f8fcf9;
+        border: 1px solid #c8e7d1!important;
+      }
+      .button-sokolin-google-white:active {
+        border: 1px solid transparent!important;
+        background: #dff2e4;
+        border: 1px solid transparent!important;
+        box-shadow: 0 2px 6px 2pxrgba(60,64,67,.15);
+      }
+      label {
+        color: #3c4043;
+        font-size: 14px;
+      }
