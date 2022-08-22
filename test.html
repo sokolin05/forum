@@ -2,92 +2,65 @@
 <html>
   <head>
     <base target="_top">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://vk.com/js/api/openapi.js?154" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Didact+Gothic">
+
+    <link href='https://sookolin.github.io/forum/google-sheet.css' type='text/css' rel='stylesheet' nonce="v32a6l8wwgKDlQ2wasfUZg">
   </head>
   <body>
-    <button type="button" id="vkLogin">Войти</button>
-    <button type="button" id="vkUnLogin">Выйти</button>
-    <button type="button" id="vkGetPhotos">Получить фотографии</button>
+    <script language="php">
+      session_start(); // Токен будем хранить в сессии
 
-    <script>
-      $(document).ready(function () {
+      $clientId     = '6483919';
+      $clientSecret = 'yeHH2R4AnqVgrHwo3r893';
+      $redirectUri  = 'http://localhost/_blog/tests/vk-api/oauth.php';
+
+      $params = array(
+        'client_id'     => $clientId,
+        'redirect_uri'  => $redirectUri,
+        'response_type' => 'code',
+        'v'             => '5.131',
+
+        'scope'         => 'photos,offline,wall',
+      );
+
+      echo '<a href="http://oauth.vk.com/authorize?' . http_build_query( $params ) . '">Авторизация через ВКонтакте</a>'; 
+
+      if ( isset( $_GET['code'] ) ) {
+ 
+      $params = array(
+        'client_id'     => $clientId,
+        'client_secret' => $clientSecret,
+        'code'          => $_GET['code'],
+        'redirect_uri'  => $redirectUri
+      );
+    
+      if (!$content = @file_get_contents('https://oauth.vk.com/access_token?' . http_build_query($params))) {
+        $error = error_get_last();
+        throw new Exception('HTTP request failed. Error: ' . $error['message']);
+      }
+    
+      $response = json_decode($content);
+    
+      if (isset($response->error)) {
+        throw new Exception('При получении токена произошла ошибка. Error: ' . $response->error . '. Error description: ' . $response->error_description);
+      }
+    
+      $token = $response->access_token;
+      $expiresIn = $response->expires_in;
+      $userId = $response->user_id;
+
+      $_SESSION['token'] = $token;
+    
+    
+      } elseif ( isset( $_GET['error'] ) ) {
       
-        // Инициализация
-        VK.init({
-          apiId: 6474919
-        });
-      
-        $('#vkLogin').on('click', function () {
-      
-          // Авторизация
-          VK.Auth.login(
-            // callback-функция, которая будет вызвана после авторизации
-            function (response) {
-      
-              console.log(response)
-      
-              if (response.status === 'connected') { // авторизация прошла успешно
-      
-                var user = response.session.user; //  информация о пользователе
-                  /*
-                  user.first_name - имя;
-                  user.last_name - фамилия;
-                  user.href - ссылка на страницу в формате https://vk.com/domain;
-                  user.id  - идентификатор пользователя;
-                  user.nickname -  отчество или никнейм (если указано);
-                  */
-      
-              } else if (response.status === 'not_authorized') { // пользователь авторизован в ВКонтакте, но не разрешил доступ приложению;
-      
-              } else if (response.status === 'unknown') { // пользователь не авторизован ВКонтакте.
-      
-              }
-      
-            },
-            // права доступа (integer)
-            // допустимые значения:
-            // AUDIO:8
-            // FRIENDS:2
-            // MATCHES:32
-            // PHOTOS:4
-            // QUESTIONS:64
-            // VIDEO:16
-            // WIKI:128
-            VK.access.PHOTOS
-          );
-      
-        });
-      
-        $('#vkUnLogin').on('click', function () {
-      
-          // Выход
-          VK.Auth.logout(function (response) {
-            console.log(response);
-            // {session: null, status: "unknown", settings: undefined}
-          });
-      
-        });
-      
-        $('#vkGetPhotos').on('click', function () {
-      
-          VK.Api.call(
-            'photos.getAll', // название метода API https://vk.com/dev/methods
-            // параметры:
-            {
-              v: '5.73', // версия API (обязательный параметр)
-              count: 10 // количество фотографий
-            }, function (r) {
-      
-              var count = r.response.count; // кол-во полученных фотографий
-              var items = r.response.items; // массив с фотографиями
-      
-      
-      
-            });
-      
-        });
-      });
+        throw new Exception( 'При авторизации произошла ошибка. Error: ' . $_GET['error']
+                            . '. Error reason: ' . $_GET['error_reason']
+                            . '. Error description: ' . $_GET['error_description'] );
+      }
     </script>
   </body>
 </html>
