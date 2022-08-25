@@ -1,3 +1,12 @@
+.by {
+border: 1px solid #22242b;
+border-radius: 8px;
+color: #ffffff;
+background-color: #17191f;
+font-family: "Uni Neue";
+padding: 3px 7px;
+}
+
 @font-face {
 	font-family: "Uni Neue";
 	src:url(https://log.province5s.ru/src/font/UniNeueRegular.eot?d0384);
