@@ -1,0 +1,31 @@
+.button-sokolin {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: auto 2px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #f1af33;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #f1af33;
+  transition: .2s ease-in-out;
+}
+.button-sokolin:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.button-sokolin:hover {
+  background: #f1af33;
+  color: #000;
+}
+.button-sokolin:hover:before {
+  left: 350px;
+  transition: .5s ease-in-out;
+}
