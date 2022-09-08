@@ -1,4 +1,4 @@
-.button-sokolin {
+.button-sokolin-highlight {
   text-decoration: none;
   display: inline-block;
   padding: 5px 10px;
@@ -11,7 +11,7 @@
   color: #f1af33;
   transition: .2s ease-in-out;
 }
-.button-sokolin:before {
+.button-sokolin-highlight:before {
   content: "";
   background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
   height: 50px;
@@ -21,11 +21,11 @@
   left: -75px;
   transform: skewX(-45deg);
 }
-.button-sokolin:hover {
+.button-sokolin-highlight:hover {
   background: #f1af33;
   color: #000;
 }
-.button-sokolin:hover:before {
+.button-sokolin-highlight:hover:before {
   left: 350px;
   transition: .5s ease-in-out;
 }
