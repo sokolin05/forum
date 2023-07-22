@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'font';
-  src:  url('font.eot?yql636');
-  src:  url('font.eot?yql636#iefix') format('embedded-opentype'),
-    url('font.ttf?yql636') format('truetype'),
-    url('font.woff?yql636') format('woff'),
-    url('font.svg?yql636#font') format('svg');
+  src:  url('font.eot?2lkq83');
+  src:  url('font.eot?2lkq83#iefix') format('embedded-opentype'),
+    url('font.ttf?2lkq83') format('truetype'),
+    url('font.woff?2lkq83') format('woff'),
+    url('font.svg?2lkq83#font') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -39,6 +39,9 @@
 }
 .icon-rotate-right:before {
   content: "\f01e";
+}
+.icon-exclamation-circle:before {
+  content: "\f06a";
 }
 .icon-cogs:before {
   content: "\f085";
